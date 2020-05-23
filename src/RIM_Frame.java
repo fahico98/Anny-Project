@@ -1,20 +1,49 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
-/**
- *
- * @author ASUS
- */
+import javax.swing.JTextField;
+
 public class RIM_Frame extends javax.swing.JFrame {
+   
+   public static JTextField[][] matriz = new JTextField[7][7];
+   public static JTextField[][] dominios = new JTextField[7][2];
+   public static JTextField[][] ideales = new JTextField[7][2];
+   public static JTextField[] pesos = new JTextField[7];
 
-   /**
-    * Creates new form RIM_Frame
-    */
-   public RIM_Frame() {
+   public RIM_Frame(){
+      
       initComponents();
+      
+      matriz[0][0] = A1_C1;matriz[0][1] = A1_C2;matriz[0][2] = A1_C3;matriz[0][3] = A1_C4;matriz[0][4] = A1_C5;matriz[0][5] = A1_C6;matriz[0][6] = A1_C7;
+      matriz[1][0] = A2_C1;matriz[1][1] = A2_C2;matriz[1][2] = A2_C3;matriz[1][3] = A2_C4;matriz[1][4] = A2_C5;matriz[1][5] = A2_C6;matriz[1][6] = A2_C7;
+      matriz[2][0] = A3_C1;matriz[2][1] = A3_C2;matriz[2][2] = A3_C3;matriz[2][3] = A3_C4;matriz[2][4] = A3_C5;matriz[2][5] = A3_C6;matriz[2][6] = A3_C7;
+      matriz[3][0] = A4_C1;matriz[3][1] = A4_C2;matriz[3][2] = A4_C3;matriz[3][3] = A4_C4;matriz[3][4] = A4_C5;matriz[3][5] = A4_C6;matriz[3][6] = A4_C7;
+      matriz[4][0] = A5_C1;matriz[4][1] = A5_C2;matriz[4][2] = A5_C3;matriz[4][3] = A5_C4;matriz[4][4] = A5_C5;matriz[4][5] = A5_C6;matriz[4][6] = A5_C7;
+      matriz[5][0] = A6_C1;matriz[5][1] = A6_C2;matriz[5][2] = A6_C3;matriz[5][3] = A6_C4;matriz[5][4] = A6_C5;matriz[5][5] = A6_C6;matriz[5][6] = A6_C7;
+      matriz[6][0] = A7_C1;matriz[6][1] = A7_C2;matriz[6][2] = A7_C3;matriz[6][3] = A7_C4;matriz[6][4] = A7_C5;matriz[6][5] = A7_C6;matriz[6][6] = A7_C7;
+      
+      dominios[0][0] = domI_1;dominios[0][1] = domF_1;
+      dominios[1][0] = domI_2;dominios[1][1] = domF_2;
+      dominios[2][0] = domI_3;dominios[2][1] = domF_3;
+      dominios[3][0] = domI_4;dominios[3][1] = domF_4;
+      dominios[4][0] = domI_5;dominios[4][1] = domF_5;
+      dominios[5][0] = domI_6;dominios[5][1] = domF_6;
+      dominios[6][0] = domI_7;dominios[6][1] = domF_7;
+      
+      ideales[0][0] = ideI_1;ideales[0][1] = ideF_1;
+      ideales[1][0] = ideI_2;ideales[1][1] = ideF_2;
+      ideales[2][0] = ideI_3;ideales[2][1] = ideF_3;
+      ideales[3][0] = ideI_4;ideales[3][1] = ideF_4;
+      ideales[4][0] = ideI_5;ideales[4][1] = ideF_5;
+      ideales[5][0] = ideI_6;ideales[5][1] = ideF_6;
+      ideales[6][0] = ideI_7;ideales[6][1] = ideF_7;
+      
+      pesos[0] = W1;
+      pesos[1] = W2;
+      pesos[2] = W3;
+      pesos[3] = W4;
+      pesos[4] = W5;
+      pesos[5] = W6;
+      pesos[6] = W7;
+      
    }
 
    /**
@@ -69,20 +98,20 @@ public class RIM_Frame extends javax.swing.JFrame {
       domI_6 = new javax.swing.JTextField();
       domI_7 = new javax.swing.JTextField();
       domI_1 = new javax.swing.JTextField();
-      ideI_3 = new javax.swing.JTextField();
-      ideF_1 = new javax.swing.JTextField();
-      ideI_2 = new javax.swing.JTextField();
-      ideI_5 = new javax.swing.JTextField();
-      ideF_4 = new javax.swing.JTextField();
-      ideI_4 = new javax.swing.JTextField();
-      ideI_1 = new javax.swing.JTextField();
-      ideF_2 = new javax.swing.JTextField();
-      ideF_3 = new javax.swing.JTextField();
-      ideF_7 = new javax.swing.JTextField();
       ideI_7 = new javax.swing.JTextField();
-      ideF_5 = new javax.swing.JTextField();
-      ideI_6 = new javax.swing.JTextField();
+      ideF_2 = new javax.swing.JTextField();
+      ideI_2 = new javax.swing.JTextField();
+      ideI_4 = new javax.swing.JTextField();
+      ideF_3 = new javax.swing.JTextField();
+      ideI_3 = new javax.swing.JTextField();
+      ideI_1 = new javax.swing.JTextField();
+      ideF_1 = new javax.swing.JTextField();
+      ideF_7 = new javax.swing.JTextField();
       ideF_6 = new javax.swing.JTextField();
+      ideI_6 = new javax.swing.JTextField();
+      ideF_4 = new javax.swing.JTextField();
+      ideI_5 = new javax.swing.JTextField();
+      ideF_5 = new javax.swing.JTextField();
       W5 = new javax.swing.JTextField();
       W6 = new javax.swing.JTextField();
       W7 = new javax.swing.JTextField();
@@ -141,8 +170,8 @@ public class RIM_Frame extends javax.swing.JFrame {
       jLabel25 = new javax.swing.JLabel();
       jButton1 = new javax.swing.JButton();
       jButton2 = new javax.swing.JButton();
-      jComboBox1 = new javax.swing.JComboBox<>();
-      jComboBox2 = new javax.swing.JComboBox<>();
+      alternativasBox = new javax.swing.JComboBox<>();
+      criteriosBox = new javax.swing.JComboBox<>();
 
       jTextField106.setText("jTextField1");
 
@@ -152,90 +181,107 @@ public class RIM_Frame extends javax.swing.JFrame {
 
       setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-      jLabel1.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+      jLabel1.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
       jLabel1.setText("C 1");
 
-      jLabel2.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+      jLabel2.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
       jLabel2.setText("C 2");
 
-      jLabel3.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+      jLabel3.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
       jLabel3.setText("C 3");
 
-      jLabel4.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+      jLabel4.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
       jLabel4.setText("C 4");
 
-      jLabel5.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+      jLabel5.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
       jLabel5.setText("C 5");
 
-      jLabel6.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+      jLabel6.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
       jLabel6.setText("C 7");
 
-      jLabel7.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+      jLabel7.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
       jLabel7.setText("C 6");
 
-      jLabel8.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+      jLabel8.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
       jLabel8.setText("A 1");
 
-      jLabel9.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+      jLabel9.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
       jLabel9.setText("A 2");
 
-      jLabel10.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+      jLabel10.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
       jLabel10.setText("A 3");
 
-      jLabel11.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+      jLabel11.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
       jLabel11.setText("A 4");
 
-      jLabel12.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+      jLabel12.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
       jLabel12.setText("A 5");
 
-      jLabel13.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+      jLabel13.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
       jLabel13.setText("A 6");
 
-      jLabel14.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+      jLabel14.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
       jLabel14.setText("A 7");
 
-      jLabel15.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+      jLabel15.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
       jLabel15.setText("Pesos");
 
-      jLabel17.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+      jLabel17.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
       jLabel17.setText("W 3");
 
-      jLabel18.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+      jLabel18.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
       jLabel18.setText("W 2");
 
-      jLabel19.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+      jLabel19.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
       jLabel19.setText("W 1");
 
-      jLabel20.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+      jLabel20.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
       jLabel20.setText("W 4");
 
-      jLabel21.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+      jLabel21.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
       jLabel21.setText("W 5");
 
-      jLabel22.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+      jLabel22.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
       jLabel22.setText("W 6");
 
-      jLabel23.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+      jLabel23.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
       jLabel23.setText("W 7");
 
-      jLabel26.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
+      jLabel26.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
       jLabel26.setText("Metodo de RIM");
 
-      jLabel24.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+      jLabel24.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
       jLabel24.setText("Dominio");
 
-      jLabel25.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+      jLabel25.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
       jLabel25.setText("Ideal de referencia");
 
-      jButton1.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+      jButton1.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
       jButton1.setText("Calcular");
 
-      jButton2.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+      jButton2.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
       jButton2.setText("Limpiar");
+      jButton2.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            jButton2ActionPerformed(evt);
+         }
+      });
 
-      jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+      alternativasBox.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
+      alternativasBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Alternativas", "2", "3", "4", "5", "6", "7" }));
+      alternativasBox.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            alternativasBoxActionPerformed(evt);
+         }
+      });
 
-      jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+      criteriosBox.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
+      criteriosBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Criterios", "2", "3", "4", "5", "6", "7" }));
+      criteriosBox.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            criteriosBoxActionPerformed(evt);
+         }
+      });
 
       javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
       jPanel1.setLayout(jPanel1Layout);
@@ -376,9 +422,9 @@ public class RIM_Frame extends javax.swing.JFrame {
                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                   .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                      .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(alternativasBox, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(32, 32, 32)
-                        .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(criteriosBox, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE))
                      .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                            .addComponent(domI_2, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -404,18 +450,14 @@ public class RIM_Frame extends javax.swing.JFrame {
                                  .addGroup(jPanel1Layout.createSequentialGroup()
                                     .addComponent(ideI_2, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(ideF_1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(ideF_2, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
                                  .addGroup(jPanel1Layout.createSequentialGroup()
                                     .addComponent(ideI_1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(ideF_2, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addComponent(ideF_1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))))
                            .addGroup(jPanel1Layout.createSequentialGroup()
                               .addGap(32, 32, 32)
                               .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                 .addGroup(jPanel1Layout.createSequentialGroup()
-                                    .addComponent(ideI_3, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(ideF_3, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
                                  .addGroup(jPanel1Layout.createSequentialGroup()
                                     .addComponent(ideI_7, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -431,7 +473,11 @@ public class RIM_Frame extends javax.swing.JFrame {
                                  .addGroup(jPanel1Layout.createSequentialGroup()
                                     .addComponent(ideI_4, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(ideF_4, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
+                                    .addComponent(ideF_4, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                 .addGroup(jPanel1Layout.createSequentialGroup()
+                                    .addComponent(ideI_3, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(ideF_3, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
                   .addGap(58, 58, 58))))
          .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
             .addGap(458, 458, 458)
@@ -522,7 +568,7 @@ public class RIM_Frame extends javax.swing.JFrame {
                            .addComponent(domI_2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                            .addComponent(domF_2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                            .addComponent(ideI_2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                           .addComponent(ideF_1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                           .addComponent(ideF_2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                            .addComponent(A3_C3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -532,8 +578,8 @@ public class RIM_Frame extends javax.swing.JFrame {
                            .addComponent(A3_C7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                            .addComponent(domI_3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                            .addComponent(domF_3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                           .addComponent(ideI_4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                           .addComponent(ideF_4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                           .addComponent(ideI_3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                           .addComponent(ideF_3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                            .addComponent(A4_C3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -543,8 +589,8 @@ public class RIM_Frame extends javax.swing.JFrame {
                            .addComponent(A4_C7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                            .addComponent(domI_4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                            .addComponent(domF_4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                           .addComponent(ideI_5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                           .addComponent(ideF_5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                           .addComponent(ideI_4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                           .addComponent(ideF_4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                            .addComponent(A5_C3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -554,8 +600,8 @@ public class RIM_Frame extends javax.swing.JFrame {
                            .addComponent(A5_C7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                            .addComponent(domI_5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                            .addComponent(domF_5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                           .addComponent(ideI_6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                           .addComponent(ideF_6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                           .addComponent(ideI_5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                           .addComponent(ideF_5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                            .addComponent(A6_C3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -565,15 +611,15 @@ public class RIM_Frame extends javax.swing.JFrame {
                            .addComponent(A6_C7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                            .addComponent(domI_6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                            .addComponent(domF_6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                           .addComponent(ideI_7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                           .addComponent(ideF_7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                           .addComponent(ideI_6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                           .addComponent(ideF_6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                      .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(ideI_1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(ideF_2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(ideF_1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                   .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                   .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                     .addComponent(ideI_3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                     .addComponent(ideF_3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                     .addComponent(ideI_7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                     .addComponent(ideF_7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
             .addGap(18, 18, 18)
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                .addComponent(W1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -584,8 +630,8 @@ public class RIM_Frame extends javax.swing.JFrame {
                .addComponent(W6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                .addComponent(W7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                .addComponent(jLabel15)
-               .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-               .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+               .addComponent(alternativasBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+               .addComponent(criteriosBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -616,6 +662,57 @@ public class RIM_Frame extends javax.swing.JFrame {
 
       pack();
    }// </editor-fold>//GEN-END:initComponents
+
+   private void alternativasBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_alternativasBoxActionPerformed
+      
+      String alternativasStr = alternativasBox.getSelectedItem().toString();
+      String criteriosStr = criteriosBox.getSelectedItem().toString();
+      
+      int a = 0;
+      int c = 0;
+      
+      if(alternativasStr.compareTo("Alternativas") != 0){
+         a = Integer.parseInt(alternativasStr);
+         c = criteriosStr.compareTo("Criterios") != 0 ? Integer.parseInt(criteriosStr) : 7;
+         cambioMatriz(a, c);
+         cambioDominios(a);
+         cambioIdeales(a);
+      }
+      
+   }//GEN-LAST:event_alternativasBoxActionPerformed
+
+   private void criteriosBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_criteriosBoxActionPerformed
+      
+      String alternativasStr = alternativasBox.getSelectedItem().toString();
+      String criteriosStr = criteriosBox.getSelectedItem().toString();
+      
+      int a = 0;
+      int c = 0;
+      
+      if(criteriosStr.compareTo("Criterios") != 0){
+         c = Integer.parseInt(criteriosStr);
+         a = alternativasStr.compareTo("Alternativas") != 0 ? Integer.parseInt(alternativasStr) : 7;
+         cambioMatriz(a, c);
+         cambioPesos(c);
+      }
+      
+   }//GEN-LAST:event_criteriosBoxActionPerformed
+
+   private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+      
+      for (int i = 0; i < 7; i++) {
+         for (int j = 0; j < 7; j++) {
+            matriz[i][j].setText("");
+            
+         }
+         for (int j = 0; j < 2; j++) {
+            dominios[i][j].setText("");
+            ideales[i][j].setText("");
+         }
+         pesos[i].setText("");
+      }
+      
+   }//GEN-LAST:event_jButton2ActionPerformed
 
    /**
     * @param args the command line arguments
@@ -650,6 +747,64 @@ public class RIM_Frame extends javax.swing.JFrame {
             new RIM_Frame().setVisible(true);
          }
       });
+   }
+   
+   public static void cambioMatriz(int a, int c){
+      for(int i = a; i < 7; i++){
+         for (int j = 0; j < 7; j++) {
+            matriz[i][j].setText("");
+            matriz[i][j].setEnabled(false);
+         }
+      }
+      for(int i = 0; i < 7; i++){
+         for (int j = c; j < 7; j++) {
+            matriz[i][j].setText("");
+            matriz[i][j].setEnabled(false);
+         }
+      }
+      for(int i = 0; i < a; i++){
+         for (int j = 0; j < c; j++){
+            matriz[i][j].setEnabled(true);
+         }
+      }
+   }
+   
+   public static void cambioDominios(int a){
+      for(int i = a; i < 7; i++){
+         for(int j = 0; j < 2; j++){
+            dominios[i][j].setText("");
+            dominios[i][j].setEnabled(false);
+         }
+      }
+      for(int i = 0; i < a; i++){
+         for(int j = 0; j < 2; j++){
+            dominios[i][j].setEnabled(true);
+         }
+      }
+   }
+   
+   public static void cambioIdeales(int a){
+      for(int i = a; i < 7; i++){
+         for(int j = 0; j < 2; j++){
+            ideales[i][j].setText("");
+            ideales[i][j].setEnabled(false);
+         }
+      }
+      for(int i = 0; i < a; i++){
+         for(int j = 0; j < 2; j++){
+            ideales[i][j].setEnabled(true);
+         }
+      }
+   }
+   
+   public static void cambioPesos(int c){
+      for(int i = c; i < 7; i++) {
+         pesos[i].setText("");
+         pesos[i].setEnabled(false);
+      }
+      for(int i = 0; i < c; i++) {
+         pesos[i].setEnabled(true);
+      }
    }
 
    // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -709,6 +864,8 @@ public class RIM_Frame extends javax.swing.JFrame {
    private javax.swing.JTextField W5;
    private javax.swing.JTextField W6;
    private javax.swing.JTextField W7;
+   private javax.swing.JComboBox<String> alternativasBox;
+   private javax.swing.JComboBox<String> criteriosBox;
    private javax.swing.JTextField domF_1;
    private javax.swing.JTextField domF_2;
    private javax.swing.JTextField domF_3;
@@ -739,8 +896,6 @@ public class RIM_Frame extends javax.swing.JFrame {
    private javax.swing.JTextField ideI_7;
    private javax.swing.JButton jButton1;
    private javax.swing.JButton jButton2;
-   private javax.swing.JComboBox<String> jComboBox1;
-   private javax.swing.JComboBox<String> jComboBox2;
    private javax.swing.JLabel jLabel1;
    private javax.swing.JLabel jLabel10;
    private javax.swing.JLabel jLabel11;
